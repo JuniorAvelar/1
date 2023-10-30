@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pais</title>
+</head>
+<body>
+    <h1></h1>
+    <div>Em que pais você Mora?</div>
+    <input type="text" id="caixa">
+    <input type="button" value="enviar" id="bnt">
+    <div id="res">
+
+<script>
+      
+    var bnt = window.document.getElementById('bnt')     // fazer o bnt fucionar
+      bnt.addEventListener('click', clicar)      // evento de clicar
+      
+ 
+function clicar(){   // quando clicar no botao 'enviar' vai rodar esse bloca
+
+   var caixa = document.getElementById('caixa') 
+   var caixa2 = (caixa.value)                    // pega o valor da caixa e coloca na varialel caixa 2 
+                   
+   var resposta = window.document.getElementById('res')
+
+     if (caixa2 =='brasil'){   
+                                                  // quanto a pesso for brasileira vai mosta na tela 
+    resposta.innerHTML += `<div> moranso no ${caixa2} vc é: <strong> brasileiro </strong> </div>`
+}
+else {                                           // se a pesso não for brasileira vai mostra que ela e estrangeira
+    resposta.innerHTML += '<p> estrangeiro </p>'
+}
+}  
+
+</script>
+</body>
+</html>
